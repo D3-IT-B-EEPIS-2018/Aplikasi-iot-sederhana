@@ -1,142 +1,334 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    tools:context=".RegisterActivity">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:paddingStart="46dp"
     android:paddingEnd="46dp"
-    android:paddingTop="46dp"
-    android:background="@color/colorBackground"
-    tools:context=".RegisterActivity">
-    <ImageView
-        android:id="@+id/logo_of_verify"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_centerHorizontal="true"
-        android:src="@mipmap/logoPutih"
-        android:contentDescription="Logo Splash Screen"
-        tools:ignore="HardcodedText" />
+    android:paddingTop="46dp">
+
     <TextView
-        android:id="@+id/txtV_welcome"
+        android:id="@+id/txtV_tReg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
-        android:fontFamily="@font/poppins_medium"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_below="@id/logo_of_verify"
+        android:text="Register Your Account"
+        android:textAlignment="center"
+        android:textSize="24sp"
         android:textColor="@color/colorLight"
-        android:text="Welcome !"
-        android:textAlignment="center"/>
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/txtTIL_uname"
+        android:fontFamily="@font/poppins_medium"/>
+
+    <LinearLayout
+        android:id="@+id/lL_personal"
+        android:layout_below="@id/txtV_tReg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/txtV_welcome"
-        android:fontFamily="@font/poppins_regular"
-        android:focusable="true"
+        android:orientation="vertical"
         android:layout_marginTop="28dp"
-        android:focusableInTouchMode="true"
-        android:background="@drawable/round_area_input"
-        android:textColorHint="@color/colorAccentLight">
-        <LinearLayout
+        android:background="@drawable/round_area_white"
+        android:padding="16dp">
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="8dp"
-                android:background="@drawable/ic_person_outline_black_24dp" />
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txtIET_uname"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_light"
-                android:hint="Username"
-                android:ems="10"
-                android:text=""
-                android:inputType="text"
-                android:textSize="14sp"
-                android:layout_marginBottom="6dp"/>
-
-        </LinearLayout>
-    </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/txtTIL_pass"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/txtTIL_uname"
-        android:fontFamily="@font/poppins_regular"
-        android:focusable="true"
-        android:layout_marginTop="28dp"
-        android:focusableInTouchMode="true"
-        android:background="@drawable/round_area_input"
-        android:textColorHint="@color/colorAccentLight">
-        <LinearLayout
+            android:text="Personal"
+            android:textSize="18sp"
+            android:textColor="@color/colorTopicBorder"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtTIL_uname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="8dp"
-                android:background="@drawable/ic_lock_outline_black_24dp" />
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txtIET_pass"
+            android:fontFamily="@font/poppins_regular"
+            android:focusable="true"
+            android:layout_marginTop="4dp"
+            android:focusableInTouchMode="true"
+            android:background="@drawable/round_area_white"
+            android:textColorHint="@color/colorAccentLight">
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_light"
-                android:hint="Password"
-                android:ems="10"
-                android:text=""
-                android:inputType="text"
-                android:textSize="14sp"
-                android:layout_marginBottom="6dp"/>
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/ic_person_outline_black_24dp" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtIET_uname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_light"
+                    android:hint="Username"
+                    android:ems="10"
+                    android:text=""
+                    android:inputType="text"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="6dp"/>
 
-        </LinearLayout>
-    </com.google.android.material.textfield.TextInputLayout>
-    <TextView
-        android:id="@+id/txtV_fPass"
+            </LinearLayout>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtTIL_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:focusable="true"
+            android:layout_marginTop="4dp"
+            android:focusableInTouchMode="true"
+            android:background="@drawable/round_area_white"
+            android:textColorHint="@color/colorAccentLight">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/ic_lock_outline_black_24dp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtIET_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_light"
+                    android:hint="Password"
+                    android:ems="10"
+                    android:text=""
+                    android:inputType="text"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="6dp"/>
+
+            </LinearLayout>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lL_server"
+        android:layout_below="@id/lL_personal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_below="@id/txtTIL_pass"
-        android:fontFamily="@font/poppins_regular"
-        android:text="Forgot your password ?"
-        android:textAlignment="textEnd"
-        android:textColor="@color/colorLight"/>
+        android:orientation="vertical"
+        android:background="@drawable/round_area_white"
+        android:layout_marginTop="28dp"
+        android:padding="16dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Server"
+            android:textSize="18sp"
+            android:textColor="@color/colorTopicBorder"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtTIL_host"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:focusable="true"
+            android:layout_marginTop="4dp"
+            android:focusableInTouchMode="true"
+            android:background="@drawable/round_area_white"
+            android:textColorHint="@color/colorAccentLight">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/ic_cloud_queue_black_24dp" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtIET_host"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_light"
+                    android:hint="Host"
+                    android:ems="10"
+                    android:text=""
+                    android:inputType="text"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="6dp"/>
+
+            </LinearLayout>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtTIL_port"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:focusable="true"
+            android:layout_marginTop="4dp"
+            android:focusableInTouchMode="true"
+            android:background="@drawable/round_area_white"
+            android:textColorHint="@color/colorAccentLight">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/ic_compare_arrows_black_24dp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtIET_port"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_light"
+                    android:hint="Port"
+                    android:ems="10"
+                    android:text=""
+                    android:inputType="text"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="6dp"/>
+
+            </LinearLayout>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lL_topic"
+        android:layout_below="@id/lL_server"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/round_area_white"
+        android:layout_marginTop="28dp"
+        android:padding="16dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Topic"
+            android:textSize="18sp"
+            android:textColor="@color/colorTopicBorder"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtTIL_topic1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:focusable="true"
+            android:layout_marginTop="4dp"
+            android:focusableInTouchMode="true"
+            android:background="@drawable/round_area_white"
+            android:textColorHint="@color/colorAccentLight">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/thermostat" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtIET_topic1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_light"
+                    android:hint="Topic 1"
+                    android:ems="10"
+                    android:text=""
+                    android:inputType="text"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="6dp"/>
+            </LinearLayout>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtTIL_topic2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:focusable="true"
+            android:layout_marginTop="4dp"
+            android:focusableInTouchMode="true"
+            android:background="@drawable/round_area_white"
+            android:textColorHint="@color/colorAccentLight">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/thermostat" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtIET_topic2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_light"
+                    android:hint="Topic 2"
+                    android:ems="10"
+                    android:text=""
+                    android:inputType="text"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="6dp"/>
+            </LinearLayout>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtTIL_topic3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:focusable="true"
+            android:layout_marginTop="4dp"
+            android:focusableInTouchMode="true"
+            android:background="@drawable/round_area_white"
+            android:textColorHint="@color/colorAccentLight">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/thermostat" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtIET_topic3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_light"
+                    android:hint="Topic 3"
+                    android:ems="10"
+                    android:text=""
+                    android:inputType="text"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="6dp"/>
+            </LinearLayout>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
     <Button
         android:id="@+id/btn_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/txtV_fPass"
+        android:layout_below="@id/lL_topic"
         android:layout_marginTop="28dp"
         android:textSize="18sp"
         android:fontFamily="@font/poppins_medium"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/round_area_btn"
+        android:background="@drawable/round_area_blue"
         android:textColor="@color/colorLight"
         android:paddingStart="32dp"
         android:paddingEnd="32dp"
-        android:text="Login"/>
-    <TextView
-        android:id="@+id/txtV_reg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:textAlignment="center"
-        android:layout_marginBottom="28dp"
-        android:fontFamily="@font/poppins_medium"
-        android:textColor="@color/colorLight"
-        android:textStyle="bold"
-        android:text="don't have account ? REGISTER"/>
+        android:text="Register"/>
+
 </RelativeLayout>
+
+</ScrollView>
