@@ -14,7 +14,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_centerHorizontal="true"
-        android:src="@mipmap/logoPutih"
+        android:src="@mipmap/logo_putih"
         android:contentDescription="Logo Splash Screen"
         tools:ignore="HardcodedText" />
     <TextView
